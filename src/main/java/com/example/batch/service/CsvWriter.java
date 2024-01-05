@@ -29,7 +29,7 @@ public class CsvWriter  {
     private final BatchService batchService;
 
 
-    @Scheduled(cron = "0 55 16 * * ?")
+    @Scheduled(cron = "0 40 5 * * ?")
     public void myScheduledTask(){
         List<ResponseDto> data = batchService.getData();
 
@@ -54,7 +54,7 @@ public class CsvWriter  {
 
         String now = dateFormat.format(new Date());
         log.info(now.toString());
-        String csvFilePath = "C:\\Users\\Administrator\\Desktop\\국비\\JSP Project\\batch\\src\\main\\resources\\"+now+"_통계.csv";
+        String csvFilePath = "src/main/resources/"+now+"_통계.csv";
 
         log.info(csvData.toString());
         try {
