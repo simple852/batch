@@ -40,11 +40,11 @@ public class CsvWriter  {
     public void createCSVFile(List<ResponseDto> data){
         StringBuilder csvData = new StringBuilder();
         csvData.append("시군구,조회수\n");
-        for (ResponseDto entity : data) {
+        for (ResponseDto csv : data) {
             csvData.append(
-                    entity.getLocation())
+                     csv.getLocation())
                     .append(',')
-                    .append(String.valueOf(entity.getCount()))
+                    .append(String.valueOf(csv.getCount()))
                     .append("\n");
 
         }
